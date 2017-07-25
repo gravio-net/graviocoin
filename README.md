@@ -1,9 +1,9 @@
 Graviocoin Core integration/staging tree
 =====================================
 
-[![Build Status](https://travis-ci.org/graviocoin-project/graviocoin.svg?branch=master)](https://travis-ci.org/graviocoin-project/graviocoin)
+[![Build Status](https://travis-ci.org/graviocoin-project/graviocoin.svg?branch=gio.0.1.6)](https://travis-ci.org/graviocoin-project/graviocoin)
 
-https://graviocoin.org
+https://gravio.net
 
 What is Graviocoin?
 ----------------
@@ -15,7 +15,7 @@ out collectively by the network. Graviocoin Core is the name of open source
 software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the Graviocoin Core software, see [https://graviocoin.org](https://graviocoin.org).
+the Graviocoin Core software, see [https://gravio.net](https://gravio.net).
 
 License
 -------
@@ -26,7 +26,7 @@ information or see https://opensource.org/licenses/MIT.
 Development Process
 -------------------
 
-The `master` branch is regularly built and tested, but is not guaranteed to be
+The `gio.0.1.6` branch is regularly built and tested, but is not guaranteed to be
 completely stable. [Tags](https://github.com/graviocoin-project/graviocoin/tags) are created
 regularly to indicate new official, stable release versions of Graviocoin Core.
 
