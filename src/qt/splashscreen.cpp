@@ -44,7 +44,10 @@ SplashScreen::SplashScreen(Qt::WindowFlags f, const NetworkStyle *networkStyle) 
     // define text to place
     QString titleText       = tr(PACKAGE_NAME);
     QString versionText     = QString("Version %1").arg(QString::fromStdString(FormatFullVersion()));
-    QString copyrightText   = QString::fromUtf8(CopyrightHolders(strprintf("\xc2\xA9 %u-%u ", 2011, COPYRIGHT_YEAR)).c_str());
+    //QString copyrightText   = QString::fromUtf8(CopyrightHolders(strprintf("\xc2\xA9 %u-%u ", 2011, COPYRIGHT_YEAR)).c_str());
+    // todo (g): make shure - correct copyright in the next year: "Copyright (C) 2017-2018 "
+    QString copyrightText   = QString::fromUtf8(CopyrightHolders(strprintf(_("Copyright (C) %i"), /*COPYRIGHT_YEAR_GRAVIO,*/ COPYRIGHT_YEAR) + " ").c_str());
+
     QString titleAddText    = networkStyle->getTitleAddText();
 
     QString font            = QApplication::font().toString();

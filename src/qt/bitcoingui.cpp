@@ -55,6 +55,7 @@
 #include <QTimer>
 #include <QToolBar>
 #include <QVBoxLayout>
+#include <QStyleFactory>
 
 #if QT_VERSION < 0x050000
 #include <QTextDocument>
@@ -216,6 +217,10 @@ BitcoinGUI::BitcoinGUI(const PlatformStyle *platformStyle, const NetworkStyle *n
     progressBar = new GUIUtil::ProgressBar();
     progressBar->setAlignment(Qt::AlignCenter);
     progressBar->setVisible(false);
+
+#if defined(Q_OS_WIN)
+    QApplication::setStyle(QStyleFactory::create("Fusion"));
+#endif
 
     // Override style sheet for progress bar for styles that have a segmented progress bar,
     // as they make the text unreadable (workaround for issue #1071)
