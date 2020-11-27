@@ -752,14 +752,14 @@ void MessageTableModel::subscribeToCoreSignals()
 {
     // Connect signals to wallet
     // TODO: we need a message notification method
-    wallet->NotifyTransactionChanged.connect(boost::bind(NotifyMessageChanged, this, _1, _2, _3));
-    wallet->ShowProgress.connect(boost::bind(ShowProgress, this, _1, _2));
+    wallet->NotifyTransactionChanged.connect(boost::bind(NotifyMessageChanged, this, boost::placeholders::_1, boost::placeholders::_2, boost::placeholders::_3));
+    wallet->ShowProgress.connect(boost::bind(ShowProgress, this, boost::placeholders::_1, boost::placeholders::_2));
 }
 
 void MessageTableModel::unsubscribeFromCoreSignals()
 {
     // Disconnect signals from wallet
     // TODO: we need a message notification method
-    wallet->NotifyTransactionChanged.disconnect(boost::bind(NotifyMessageChanged, this, _1, _2, _3));
-    wallet->ShowProgress.disconnect(boost::bind(ShowProgress, this, _1, _2));
+    wallet->NotifyTransactionChanged.disconnect(boost::bind(NotifyMessageChanged, this, boost::placeholders::_1, boost::placeholders::_2, boost::placeholders::_3));
+    wallet->ShowProgress.disconnect(boost::bind(ShowProgress, this, boost::placeholders::_1, boost::placeholders::_2));
 }
